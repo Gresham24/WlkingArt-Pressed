@@ -3,7 +3,7 @@
 A small stick-on nail business based in South Africa, Jhb.
 
 ## Website
-
+https://wlkingartpressed.netlify.app/
 
 ## Configuration
 
