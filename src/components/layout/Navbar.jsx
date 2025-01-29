@@ -1,15 +1,27 @@
 import logo from "../../assets/logo-black.png";
-import { StyledNavbar } from "../../styles/Navbar.styles";
-import { StyledLogo } from "../../styles/Navbar.styles";
+import openMenu from "../../assets/open-menu-icon.svg";
+import {
+    StyledNavbar,
+    StyledLogo,
+    StyledMenu,
+    StyledNavLink,
+    StyledNavLinks,
+} from "../../styles/Navbar.styles";
 
 function Navbar() {
     return (
-        <>
-            <StyledNavbar>
-                
-                <StyledLogo src={logo} alt="WlkingArt Pressed logo" />
-            </StyledNavbar>
-        </>
+        <StyledNavbar>
+            <StyledMenu src={openMenu} alt="icon to open menu" />
+            <StyledLogo src={logo} alt="WlkingArt Pressed logo" />
+            <StyledNavLinks>
+                <StyledNavLink to="/">Home</StyledNavLink>
+                <StyledNavLink to="/">About</StyledNavLink>
+                <StyledNavLink to="/">Sizes</StyledNavLink>
+                <StyledNavLink to="/">Shop</StyledNavLink>
+                <StyledNavLink to="/">FAQ</StyledNavLink>
+            </StyledNavLinks>
+            <div style={{ width: "24px" }} />
+        </StyledNavbar>
     );
 }
 
