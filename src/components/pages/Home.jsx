@@ -3,7 +3,7 @@ import {
     StyledHeroH1,
     StyledHomeContainer,
     StyledShopCTA,
-} from "../../styles/Home.styles";
+} from "../../styles/Home.Styles";
 
 function Home() {
     return (
