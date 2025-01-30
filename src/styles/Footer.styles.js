@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { colors } from "../constants";
-
+import { devices } from "../constants";
 
 export const StyledFooter = styled.footer`
     background-color: ${colors.mattBlack};
@@ -10,12 +10,16 @@ export const StyledFooter = styled.footer`
 `;
 
 export const StyledFooterLinkWrapper = styled.div`
-    background-color: ${colors.hotPink};
-    border-radius: 16px;
     padding: 20px;
     display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
+    flex-direction: column;
+    gap: 24px;
+
+    @media ${devices.tablet} {
+        gap: 0;
+        flex-direction: row;
+        justify-content: space-around;
+    }
 `;
 
 export const StyledFooterLinks = styled.div`
@@ -23,20 +27,24 @@ export const StyledFooterLinks = styled.div`
     flex-direction: column;
     align-items: start;
     gap: 18px;
+    text-align: left;
 `;
 
 export const StyledFooterLink = styled(Link)`
     text-decoration: none;
     color: ${colors.white};
-
+    font-weight: 600;
+    transition: color 0.5s ease;
     &:hover {
-        color: ${colors.black};
+        color: ${colors.hotPink};
+        transform: scale(1.1);
     }
 `;
 
+
 export const StyledSocialsLinks = styled.div`
     p {
-        font-weight: 600;
+        font-weight: 700;
         margin: 0;
     }
     display: flex;
@@ -47,9 +55,19 @@ export const StyledSocialsLinks = styled.div`
 
 export const StyledSocialIconWrapper = styled.div`
     display: flex;
-    gap: 10px;
 `;
-export const StyledSocialIcon = styled(Link)`
+export const StyledSocialIcon = styled.a`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
     color: ${colors.white};
-    text-decoration: none;
+    transition: color 0.5s ease;
+    margin-right: 14px;
+
+    &:hover {
+        color: ${colors.hotPink};
+        transform: scale(1.2);
+    }
 `;

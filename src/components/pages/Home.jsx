@@ -1,6 +1,7 @@
 import valentineVideo from "../../assets/valentine-nails-noaudio.mp4";
 import {
     StyledHeroH1,
+    StyledSubheading,
     StyledHomeContainer,
     StyledShopCTA,
 } from "../../styles/Home.Styles";
@@ -13,7 +14,11 @@ function Home() {
                 Video not supported by your browser.
             </video>
             <div>
-                <StyledHeroH1>GEL - X LUXURY PRESS ON NAILS</StyledHeroH1>
+                <StyledHeroH1>Where Luxury💅 Meets Creativity🎨</StyledHeroH1>
+                <StyledSubheading>
+                    We specialize in gel-x handcrafted, high-quality press-on
+                    nails designed to elevate your style effortlessly.
+                </StyledSubheading>
                 <StyledShopCTA to="/">Shop our new collection</StyledShopCTA>
             </div>
         </StyledHomeContainer>

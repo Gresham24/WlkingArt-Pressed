@@ -32,11 +32,11 @@ export const StyledHomeContainer = styled.main`
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 24px;
+        gap: 10px;
         max-width: 300px;
 
         @media ${devices.tablet} {
-            max-width: none;
+            max-width: 500px;
         }
     }
 `;
@@ -44,6 +44,10 @@ export const StyledHomeContainer = styled.main`
 export const StyledHeroH1 = styled.h1`
     font-family: "Playfair Display", serif;
     font-size: 24px;
+`;
+export const StyledSubheading = styled.p`
+    font-weight: 500;
+    font-size: 14px;
 `;
 
 export const StyledShopCTA = styled(Link)`
@@ -57,9 +61,11 @@ export const StyledShopCTA = styled(Link)`
     font-family: Montserrat;
     padding: 10px;
     box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease;
     &:hover {
         background-color: ${colors.white};
         color: ${colors.hotPink};
         border: 1px solid ${colors.hotPink};
+        transform: scale(1.05); 
     }
 `;
