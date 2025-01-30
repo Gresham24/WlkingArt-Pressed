@@ -8,7 +8,7 @@ import {
 function Home() {
     return (
         <StyledHomeContainer>
-            <video autoPlay muted loop>
+            <video autoPlay muted loop playsInline>
                 <source src={valentineVideo} type="video/mp4" />
                 Video not supported by your browser.
             </video>
