@@ -1,4 +1,4 @@
-import valentineVideo from "../../assets/valentine-nails.mp4";
+import valentineVideo from "../../assets/valentine-nails-noaudio.mp4";
 import {
     StyledHeroH1,
     StyledHomeContainer,
