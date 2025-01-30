@@ -20,9 +20,10 @@ export const StyledNavbar = styled.nav`
         flex-direction: column;
     }
     @media ${devices.laptop} {
+        box-shadow: 0 5px 8px rgba(0, 0, 0, 0.6);
         margin: 0;
         border-radius: 0px;
-        padding: 24px;
+        padding: 20px 0;
     }
 `;
 
@@ -36,20 +37,18 @@ export const StyledLogo = styled.img`
     @media ${devices.laptop} {
         width: 180px;
     }
-
 `;
 export const StyledMenu = styled.img`
-/* Hambuger icon styling */
+    /* Hambuger icon styling */
 
-@media ${devices.tablet} {
+    @media ${devices.tablet} {
         display: none;
     }
 `;
 
-
 export const StyledNavLinks = styled.div`
     display: none;
-    margin-top: 5px;
+    margin-top: 10px;
     gap: 1.5rem;
 
     @media ${devices.tablet} {
@@ -60,7 +59,11 @@ export const StyledNavLinks = styled.div`
 export const StyledNavLink = styled(Link)`
     color: ${colors.black};
     text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.2s ease;
     &:hover {
         color: red;
+        font-weight: 500;
+        transform: scale(1.1);
     }
 `;

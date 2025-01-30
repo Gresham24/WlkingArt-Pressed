@@ -34,13 +34,12 @@ export const StyledFooterLink = styled(Link)`
     text-decoration: none;
     color: ${colors.white};
     font-weight: 600;
-    transition: color 0.5s ease;
+    transition: color 0.3s ease, transform 0.2s ease;
     &:hover {
         color: ${colors.hotPink};
-        transform: scale(1.1);
+        transform: scale(1.2);
     }
 `;
-
 
 export const StyledSocialsLinks = styled.div`
     p {
