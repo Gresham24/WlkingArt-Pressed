@@ -11,12 +11,18 @@ export const StyledNavbar = styled.nav`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
     @media ${devices.tablet} {
         flex-direction: column;
     }
     @media ${devices.laptop} {
         margin: 0;
         border-radius: 0px;
+        padding: 24px;
     }
 `;
 
