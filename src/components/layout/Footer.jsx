@@ -42,7 +42,7 @@ function Footer() {
                     <StyledFooterLink to="/">Home</StyledFooterLink>
                     <StyledFooterLink to="/">About</StyledFooterLink>
                     <StyledFooterLink to="/">Sizes</StyledFooterLink>
-                    <StyledFooterLink to="/">Shop Collection</StyledFooterLink>
+                    <StyledFooterLink to="/shop">Shop Collection</StyledFooterLink>
                     <StyledFooterLink to="/">FAQ</StyledFooterLink>
                     <StyledFooterLink to="/">Privacy Policy</StyledFooterLink>
                 </StyledFooterLinks>

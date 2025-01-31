@@ -17,7 +17,7 @@ function Navbar() {
                 <StyledNavLink to="/">Home</StyledNavLink>
                 <StyledNavLink to="/">About</StyledNavLink>
                 <StyledNavLink to="/">Sizes</StyledNavLink>
-                <StyledNavLink to="/">Shop</StyledNavLink>
+                <StyledNavLink to="/shop">Shop</StyledNavLink>
                 <StyledNavLink to="/">FAQ</StyledNavLink>
             </StyledNavLinks>
             <div style={{ width: "24px" }} />
