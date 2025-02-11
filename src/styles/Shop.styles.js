@@ -1,39 +1,61 @@
 import styled from "styled-components";
-
+import { Swiper } from "swiper/react";
 import { colors } from "../constants";
-// import { devices } from "../constants";
 
 export const StyledShopContainer = styled.main`
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* align-items: center; */
-    /* padding: 0px 24px; */
-    height: 100vh;
-
-    border: 2px solid red;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
 `;
 
-export const StyledBackgroundImg = styled.div`
-    position: absolute;
-    top: 0px;
-    z-index: -1;
+export const StyledSwiper = styled(Swiper)`
+    margin-bottom: 40px;
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: ${colors.hotPink};
+    }
+
+    .swiper-button-next {
+        right: 10px;
+    }
+
+    .swiper-button-prev {
+        left: 10px;
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: ${colors.hotPink};
+    }
+
+    .swiper-slide {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 40px;
+        transition: all 0.3s ease;
+        transform: scale(0.9);
+    }
+
+    .swiper-slide-active {
+        transform: scale(1);
+    }
 `;
 
 export const StyledH1 = styled.h1`
     margin-top: 150px;
-
     font-family: Raleway, serif;
     font-weight: 700;
     font-size: 32px;
-    color: ${colors.white};
-
-    background-color:  blue;
-
+    color: ${colors.black};
+    text-align: center;
+    margin-bottom: 30px;
 `;
 
 export const StyledShopCTA = styled.a`
-
-
+    align-self: center;
+    display: flex;
+    align-items: center;
+    gap: 5px;
     text-decoration: none;
     background-color: ${colors.hotPink};
     border: 1px transparent solid;
@@ -46,6 +68,7 @@ export const StyledShopCTA = styled.a`
     box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
     transition: transform 0.3s ease;
     &:hover {
+        cursor: pointer;
         background-color: ${colors.white};
         color: ${colors.hotPink};
         border: 1px solid ${colors.hotPink};
