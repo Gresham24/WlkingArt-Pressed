@@ -3,10 +3,31 @@ import { Swiper } from "swiper/react";
 import { colors } from "../constants";
 
 export const StyledShopContainer = styled.main`
-    padding: 20px 0;
-    display: flex;
-    flex-direction: column;
+    background-image: url(${props => props.$backgroundImage});
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    padding: 20px;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(255, 255, 255, 0.2); // Adjust opacity as needed
+        z-index: 1;
+    }
+
+    > * {
+        position: relative;
+        z-index: 2;
+    }
 `;
+
 
 export const StyledSwiper = styled(Swiper)`
     margin-bottom: 40px;

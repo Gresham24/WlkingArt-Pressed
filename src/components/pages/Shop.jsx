@@ -5,6 +5,7 @@ import ProductItem from "../common/ProductItem";
 import pinkSwirl from "../../assets/pink-nails.jpeg";
 import loveBites from "../../assets/Love-bite-nails.jpeg";
 import cheetahGirl from "../../assets/cheatah-print-nails.jpeg";
+import backheadNails from "../../assets/backhead-nails.jpg";
 import {
     StyledShopContainer,
     StyledH1,
@@ -59,7 +60,7 @@ function Shop() {
     ];
 
     return (
-        <StyledShopContainer>
+        <StyledShopContainer $backgroundImage={backheadNails}>
             <StyledH1>Shop The Collection</StyledH1>
             <div>
                 <StyledSwiper
