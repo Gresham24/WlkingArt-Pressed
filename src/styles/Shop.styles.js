@@ -9,6 +9,8 @@ export const StyledShopContainer = styled.main`
     background-repeat: no-repeat;
     min-height: 100vh;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
     position: relative;
 
     &::before {
