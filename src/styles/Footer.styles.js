@@ -26,8 +26,9 @@ export const StyledFooterLinks = styled.div`
     display: flex;
     flex-direction: column;
     align-items: start;
-    gap: 18px;
+    gap: 22px;
     text-align: left;
+
 `;
 
 export const StyledFooterLink = styled(Link)`

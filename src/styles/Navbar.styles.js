@@ -20,7 +20,7 @@ export const StyledNavbar = styled.nav`
         flex-direction: column;
     }
     @media ${devices.laptop} {
-        box-shadow: 0 5px 8px rgba(0, 0, 0, 0.6);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         margin: 0;
         border-radius: 0px;
         padding: 20px 0;
