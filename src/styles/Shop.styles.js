@@ -8,7 +8,7 @@ export const StyledShopContainer = styled.main`
     background-position: center;
     background-repeat: no-repeat;
     min-height: 100vh;
-    padding: 20px;
+    padding: 20px 0;
     display: flex;
     flex-direction: column;
     position: relative;
