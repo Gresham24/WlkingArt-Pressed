@@ -26,7 +26,7 @@ export const StyledHomeContainer = styled.main`
     div {
         position: absolute;
         bottom: 100px;
-        background-color: ${colors.fadedWhite};
+        background-color: rgba(255, 255, 255, 0.9);
         padding: 24px;
         border-radius: 12px;
         display: flex;
@@ -42,7 +42,6 @@ export const StyledHomeContainer = styled.main`
 `;
 
 export const StyledHeroH1 = styled.h1`
-    font-family: "Playfair Display", serif;
     font-size: 24px;
 `;
 export const StyledSubheading = styled.p`
