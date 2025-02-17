@@ -19,5 +19,5 @@ export const devices = {
   mobile: `(min-width: ${breakpoints.mobile})`,
   tablet: `(min-width: ${breakpoints.tablet})`,
   laptop: `(min-width: ${breakpoints.laptop})`,
-  // desktop: `(min-width: ${breakpoints.desktop})`,
+  touch: `(hover: none) and (pointer: coarse)`,
 };

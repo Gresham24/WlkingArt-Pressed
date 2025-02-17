@@ -20,7 +20,7 @@ export const StyledShopContainer = styled.main`
         right: 0;
         bottom: 0;
         left: 0;
-        background-color: rgba(255, 255, 255, 0.2); // Adjust opacity as needed
+        /* background-color: rgba(255, 255, 255, 0.2); // Adjust opacity as needed */
         z-index: 1;
     }
 

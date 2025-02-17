@@ -19,7 +19,7 @@ function Home() {
                     We specialize in gel-x handcrafted, high-quality press-on
                     nails designed to elevate your style effortlessly.
                 </StyledSubheading>
-                <StyledShopCTA to="/">Shop our new collection</StyledShopCTA>
+                <StyledShopCTA to="/shop">Shop our new collection</StyledShopCTA>
             </div>
         </StyledHomeContainer>
     );
