@@ -33,3 +33,4 @@ export const StyledLogo = styled.img`
     height: auto;
     margin-top: 20px;
 `;
+
