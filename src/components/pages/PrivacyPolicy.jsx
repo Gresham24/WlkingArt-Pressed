@@ -4,7 +4,7 @@ import {
     StyledPrivacyPolicyH1,
     StyledPrivacyPolicyText,
     StyledLogo,
-} from "../../styles/PrivacyPolicy.Styles";
+} from "../../styles/PrivacyPolicy.styles";
 
 function PrivacyPolicy() {
     return (
