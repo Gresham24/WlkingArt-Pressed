@@ -4,6 +4,7 @@ import Home from "./components/pages/Home";
 import About from "./components/pages/About";
 import Shop from "./components/pages/Shop";
 import Footer from "./components/layout/Footer";
+import PrivacyPolicy from "./components/pages/PrivacyPolicy";
 
 function App() {
     return (
@@ -18,6 +19,7 @@ function App() {
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/shop" element={<Shop />} />
+                    <Route path="/privacypolicy" element={<PrivacyPolicy />} />
                 </Routes>
                 <Footer />
             </div>
