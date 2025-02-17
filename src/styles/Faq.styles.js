@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const StyledPageContainer = styled.div`
   max-width: 970px;
-  margin: 100px auto ;
-  padding: 0 20px;
+  margin: 100px auto;
+  padding: 50px;
 `;
 
 export const StyledFaqTitle = styled.h1`

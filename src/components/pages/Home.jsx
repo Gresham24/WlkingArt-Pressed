@@ -4,7 +4,7 @@ import {
     StyledSubheading,
     StyledHomeContainer,
     StyledShopCTA,
-} from "../../styles/Home.styles";
+} from "../../styles/Home.Styles";
 
 function Home() {
     return (
