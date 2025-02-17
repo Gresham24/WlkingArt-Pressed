@@ -5,7 +5,7 @@ import {
     StyledAboutText,
     StyledAboutSubheading,
     StyledLogo,
-} from "../../styles/About.Styles";
+} from "../../styles/About.styles";
 
 function About() {
   return (
