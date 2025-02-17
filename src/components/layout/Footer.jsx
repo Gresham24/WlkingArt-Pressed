@@ -10,6 +10,15 @@ import {
     StyledSocialIcon,
 } from "../../styles/Footer.styles";
 
+const footerLinks = [
+    { path: "/", label: "Home" },
+    { path: "/about", label: "About" },
+    { path: "/sizes", label: "Sizes" },
+    { path: "/shop", label: "Shop Collection" },
+    { path: "/faq", label: "FAQ" },
+    { path: "/privacypolicy", label: "Privacy Policy" }
+];
+
 const socialLinks = [
     {
         href: "https://www.instagram.com/",
@@ -37,15 +46,16 @@ function Footer() {
     return (
         <StyledFooter>
             <StyledFooterLinkWrapper>
-                <StyledFooterLinks>
-                    <StyledFooterLink to="/" activeClassName="active">Home</StyledFooterLink>
-                    <StyledFooterLink to="/about" activeClassName="active">About</StyledFooterLink>
-                    <StyledFooterLink to="/sizes" activeClassName="active">Sizes</StyledFooterLink>
-                    <StyledFooterLink to="/shop" activeClassName="active">
-                        Shop Collection
-                    </StyledFooterLink>
-                    <StyledFooterLink to="/faq" activeClassName="active">FAQ</StyledFooterLink>
-                    <StyledFooterLink to="/privacypolicy" activeClassName="active">Privacy Policy</StyledFooterLink>
+            <StyledFooterLinks>
+                    {footerLinks.map(({ path, label }) => (
+                        <StyledFooterLink 
+                            key={path}
+                            to={path}
+                            className={({ isActive }) => isActive ? "active" : ""}
+                        >
+                            {label}
+                        </StyledFooterLink>
+                    ))}
                 </StyledFooterLinks>
                 <StyledSocialsLinks>
                     <p>Follow us</p>
