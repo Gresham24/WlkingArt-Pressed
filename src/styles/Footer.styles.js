@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { colors } from "../constants";
 import { devices } from "../constants";
 
@@ -28,17 +28,33 @@ export const StyledFooterLinks = styled.div`
     align-items: start;
     gap: 22px;
     text-align: left;
-
 `;
 
-export const StyledFooterLink = styled(Link)`
+export const StyledFooterLink = styled(NavLink)`
     text-decoration: none;
     color: ${colors.white};
     font-weight: 600;
     transition: color 0.3s ease, transform 0.2s ease;
-    &:hover {
+    display: inline-block;
+
+    &.active {
         color: ${colors.hotPink};
-        transform: scale(1.2);
+        font-weight: 700;
+        transform: scale(1.1);
+    }
+    @media ${devices.touch} {
+        &:hover,
+        &:active {
+            color: ${colors.hotPink};
+            transform: scale(1.05);
+        }
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            color: ${colors.hotPink};
+            transform: scale(1.05);
+        }
     }
 `;
 
@@ -68,6 +84,19 @@ export const StyledSocialIcon = styled.a`
 
     &:hover {
         color: ${colors.hotPink};
-        transform: scale(1.2);
+        transform: scale(1.1);
+    }
+    @media ${devices.touch} {
+        &:hover, &:active {
+            color: ${colors.black};
+            transform: none;
+        }
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            color: ${colors.hotPink};
+            transform: scale(1.05);
+        }
     }
 `;

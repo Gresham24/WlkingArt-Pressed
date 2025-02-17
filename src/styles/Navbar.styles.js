@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { colors } from "../constants";
 import { devices } from "../constants";
 
@@ -56,14 +57,19 @@ export const StyledNavLinks = styled.div`
     }
 `;
 
-export const StyledNavLink = styled(Link)`
+export const StyledNavLink = styled(NavLink)`
     color: ${colors.black};
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease, transform 0.2s ease;
     &:hover {
-        color: red;
+        color: ${colors.hotPink};
         font-weight: 500;
+        transform: scale(1.1);
+    }
+    &.active {
+        color: ${colors.hotPink};
+        font-weight: 700;
         transform: scale(1.1);
     }
 `;

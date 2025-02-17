@@ -1,6 +1,5 @@
 import { FaFacebook, FaInstagram, FaTiktok, FaTwitter } from "react-icons/fa";
 
-
 import {
     StyledFooter,
     StyledFooterLinkWrapper,
@@ -39,12 +38,14 @@ function Footer() {
         <StyledFooter>
             <StyledFooterLinkWrapper>
                 <StyledFooterLinks>
-                    <StyledFooterLink to="/">Home</StyledFooterLink>
-                    <StyledFooterLink to="/">About</StyledFooterLink>
-                    <StyledFooterLink to="/">Sizes</StyledFooterLink>
-                    <StyledFooterLink to="/shop">Shop Collection</StyledFooterLink>
-                    <StyledFooterLink to="/">FAQ</StyledFooterLink>
-                    <StyledFooterLink to="/">Privacy Policy</StyledFooterLink>
+                    <StyledFooterLink to="/" activeClassName="active">Home</StyledFooterLink>
+                    <StyledFooterLink to="/about" activeClassName="active">About</StyledFooterLink>
+                    <StyledFooterLink to="/sizes" activeClassName="active">Sizes</StyledFooterLink>
+                    <StyledFooterLink to="/shop" activeClassName="active">
+                        Shop Collection
+                    </StyledFooterLink>
+                    <StyledFooterLink to="/faq" activeClassName="active">FAQ</StyledFooterLink>
+                    <StyledFooterLink to="/privacypolicy" activeClassName="active">Privacy Policy</StyledFooterLink>
                 </StyledFooterLinks>
                 <StyledSocialsLinks>
                     <p>Follow us</p>
@@ -63,7 +64,9 @@ function Footer() {
                 </StyledSocialsLinks>
             </StyledFooterLinkWrapper>
             <hr />
-            <small>© 2025 WlkingArt Pressed. Website 👨🏾‍💻 by Gresham Tembo</small>
+            <small>
+                © 2025 WlkingArt Pressed | Website 👨🏾‍💻 by Gresham Tembo
+            </small>
         </StyledFooter>
     );
 }

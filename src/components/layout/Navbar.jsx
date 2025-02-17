@@ -14,11 +14,11 @@ function Navbar() {
             <StyledMenu src={openMenu} alt="icon to open menu" />
             <StyledLogo src={logo} alt="WlkingArt Pressed logo" />
             <StyledNavLinks>
-                <StyledNavLink to="/">Home</StyledNavLink>
-                <StyledNavLink to="/">About</StyledNavLink>
-                <StyledNavLink to="/">Sizes</StyledNavLink>
-                <StyledNavLink to="/shop">Shop</StyledNavLink>
-                <StyledNavLink to="/">FAQ</StyledNavLink>
+                <StyledNavLink to="/" activeClassName="active">Home</StyledNavLink>
+                <StyledNavLink to="/about" activeClassName="active">About</StyledNavLink>
+                <StyledNavLink to="/sizes" activeClassName="active">Sizes</StyledNavLink>
+                <StyledNavLink to="/shop" activeClassName="active">Shop</StyledNavLink>
+                <StyledNavLink to="/faq" activeClassName="active">FAQ</StyledNavLink>
             </StyledNavLinks>
             <div style={{ width: "24px" }} />
         </StyledNavbar>
