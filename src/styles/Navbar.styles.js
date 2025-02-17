@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
-// import { Link } from "react-router-dom";
 import { colors } from "../constants";
 import { devices } from "../constants";
 

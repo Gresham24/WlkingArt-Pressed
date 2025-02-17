@@ -33,7 +33,7 @@ export const StyledFooterLinks = styled.div`
 export const StyledFooterLink = styled(NavLink)`
     text-decoration: none;
     color: ${colors.white};
-    font-weight: 600;
+    font-weight: 500;
     transition: color 0.3s ease, transform 0.2s ease;
     display: inline-block;
 
@@ -53,7 +53,8 @@ export const StyledFooterLink = styled(NavLink)`
     @media (hover: hover) {
         &:hover {
             color: ${colors.hotPink};
-            transform: scale(1.05);
+    
+            transform: scale(1.1);
         }
     }
 `;
