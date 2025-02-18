@@ -30,7 +30,7 @@ export const StyledNavbar = styled.nav`
 export const StyledLogo = styled.img`
     width: 130px;
     height: auto;
-
+    cursor: pointer;
     @media ${devices.tablet} {
         width: 150px;
     }
