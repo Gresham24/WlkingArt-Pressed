@@ -10,7 +10,7 @@ export const StyledNavbar = styled.nav`
     margin: 30px 25px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     position: fixed;
     top: 0;
     left: 0;
@@ -49,10 +49,21 @@ export const StyledMenu = styled.img`
     }
 `;
 
+export const StyledMenuWrapper = styled.div`
+    position: absolute;
+    right: 23px;
+    display: flex;
+    align-items: center;
+
+    @media ${devices.tablet} {
+        display: none;
+    }
+`;
+
 export const StyledMobileMenu = styled.div`
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
     width: 100%;
     height: 100vh;
     background-color: ${colors.white};
@@ -60,7 +71,7 @@ export const StyledMobileMenu = styled.div`
     flex-direction: column;
     align-items: center;
     padding-top: 80px;
-    transform: ${({ $isOpen }) => $isOpen ? 'translateX(0)' : 'translateX(-100%)'};
+    transform: ${({ $isOpen }) => $isOpen ? 'translateX(0)' : 'translateX(100%)'};
     transition: transform 0.3s ease-in-out;
     z-index: 1001;
 
@@ -92,8 +103,8 @@ export const StyledMobileNavLink = styled(NavLink)`
 
 export const StyledCloseButton = styled.button`
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 35px;
+    right: 35px;
     background: none;
     border: none;
     font-size: 32px;

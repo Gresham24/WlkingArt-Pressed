@@ -9,6 +9,7 @@ import {
     StyledNavLink,
     StyledNavLinks,
     StyledMobileMenu,
+    StyledMenuWrapper,
     StyledCloseButton,
     StyledMobileNavLink,
 } from "../../styles/Navbar.styles";
@@ -40,11 +41,13 @@ function Navbar() {
 
     return (
         <StyledNavbar>
-            <StyledMenu
-                src={openMenu}
-                alt="icon to open menu"
-                onClick={toggleMenu}
-            />
+            <StyledMenuWrapper>
+                <StyledMenu
+                    src={openMenu}
+                    alt="icon to open menu"
+                    onClick={toggleMenu}
+                />
+            </StyledMenuWrapper>
             <StyledLogo src={logo} onClick={handleLogoClick} alt="WlkingArt Pressed logo" />
             <StyledNavLinks>
                 {navItems.map(({ path, label }) => (
@@ -59,7 +62,7 @@ function Navbar() {
             </StyledNavLinks>
 
             <StyledMobileMenu $isOpen={isMenuOpen}>
-                <StyledCloseButton onClick={closeMenu}>×</StyledCloseButton>
+                <StyledCloseButton onClick={closeMenu}>X</StyledCloseButton>
                 {navItems.map(({ path, label }) => (
                     <StyledMobileNavLink
                         key={path}
