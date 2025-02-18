@@ -42,7 +42,8 @@ export const StyledHomeContainer = styled.main`
 `;
 
 export const StyledHeroH1 = styled.h1`
-    font-size: 24px;
+    font-size: 36px;
+    font-family: Raleway, serif;
 `;
 export const StyledSubheading = styled.p`
     font-weight: 500;

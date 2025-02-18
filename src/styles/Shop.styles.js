@@ -8,7 +8,7 @@ export const StyledShopContainer = styled.main`
     background-position: center;
     background-repeat: no-repeat;
     min-height: 100vh;
-    padding: 20px 0;
+    padding: 150px 0;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -20,7 +20,7 @@ export const StyledShopContainer = styled.main`
         right: 0;
         bottom: 0;
         left: 0;
-        /* background-color: rgba(255, 255, 255, 0.2); // Adjust opacity as needed */
+        /* background-color: rgba(255, 255, 255, 0.2); */
         z-index: 1;
     }
 
@@ -65,10 +65,7 @@ export const StyledSwiper = styled(Swiper)`
 `;
 
 export const StyledH1 = styled.h1`
-    margin-top: 150px;
-    font-family: Raleway, serif;
-    font-weight: 700;
-    font-size: 32px;
+    font-size: 36px;
     color: ${colors.black};
     text-align: center;
     margin-bottom: 30px;
@@ -90,6 +87,7 @@ export const StyledShopCTA = styled.a`
     padding: 10px;
     box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
     transition: transform 0.3s ease;
+    cursor: pointer;
     &:hover {
         cursor: pointer;
         background-color: ${colors.white};

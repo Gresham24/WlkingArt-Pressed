@@ -1,3 +1,4 @@
+import { useState } from "react";
 import logo from "../../assets/logo-black.png";
 import openMenu from "../../assets/open-menu-icon.svg";
 import {
@@ -6,9 +7,14 @@ import {
     StyledMenu,
     StyledNavLink,
     StyledNavLinks,
+    StyledMobileMenu,
+    StyledCloseButton,
+    StyledMobileNavLink,
 } from "../../styles/Navbar.styles";
 
 function Navbar() {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
     const navItems = [
         { path: "/", label: "Home" },
         { path: "/about", label: "About" },
@@ -17,9 +23,21 @@ function Navbar() {
         { path: "/faq", label: "FAQ" }
     ];
 
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
+    const closeMenu = () => {
+        setIsMenuOpen(false);
+    };
+
     return (
         <StyledNavbar>
-            <StyledMenu src={openMenu} alt="icon to open menu" />
+            <StyledMenu 
+                src={openMenu} 
+                alt="icon to open menu" 
+                onClick={toggleMenu}
+            />
             <StyledLogo src={logo} alt="WlkingArt Pressed logo" />
             <StyledNavLinks>
                 {navItems.map(({ path, label }) => (
@@ -32,6 +50,20 @@ function Navbar() {
                     </StyledNavLink>
                 ))}
             </StyledNavLinks>
+            
+            <StyledMobileMenu $isOpen={isMenuOpen}>
+                <StyledCloseButton onClick={closeMenu}>×</StyledCloseButton>
+                {navItems.map(({ path, label }) => (
+                    <StyledMobileNavLink 
+                        key={path}
+                        to={path}
+                        className={({ isActive }) => isActive ? "active" : ""}
+                        onClick={closeMenu}
+                    >
+                        {label}
+                    </StyledMobileNavLink>
+                ))}
+            </StyledMobileMenu>
             <div style={{ width: "24px" }} />
         </StyledNavbar>
     );

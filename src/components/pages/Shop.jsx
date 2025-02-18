@@ -59,6 +59,19 @@ function Shop() {
         },
     ];
 
+    const handleWhatsAppClick = () => {
+        const phoneNumber = "+27717091239"; 
+        
+        // Create a custom message (optional)
+        const message = "Hi! I'm interested in ordering press-on nails from WlkingArt Pressed.";
+        
+        // Create the WhatsApp URL
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+        
+        // Open WhatsApp in a new tab
+        window.open(whatsappUrl, '_blank');
+    };
+
     return (
         <StyledShopContainer $backgroundImage={backheadNails}>
             <StyledH1>Shop The Collection</StyledH1>
@@ -99,7 +112,7 @@ function Shop() {
                 </StyledSwiper>
             </div>
 
-            <StyledShopCTA>
+            <StyledShopCTA onClick={handleWhatsAppClick}>
                 Place Order on WhatsApp <FaWhatsapp />{" "}
             </StyledShopCTA>
         </StyledShopContainer>
