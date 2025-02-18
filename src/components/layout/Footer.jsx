@@ -1,4 +1,4 @@
-import { FaFacebook, FaInstagram, FaTiktok, FaTwitter } from "react-icons/fa";
+import { FaInstagram, FaTiktok, FaWhatsapp } from "react-icons/fa";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
@@ -21,26 +21,24 @@ const footerLinks = [
     { path: "/privacypolicy", label: "Privacy Policy" },
 ];
 
+const whatsAppMessage = "Hi! I'm interested in ordering some press-on nails from WlkingArt Pressed."
+const whatsAppNumber = "+27717091239";
+
 const socialLinks = [
     {
-        href: "https://www.instagram.com/",
+        href: "https://www.instagram.com/wlkingartpressed/",
         name: "Instagram",
         icon: <FaInstagram size={24} />,
     },
     {
-        href: "https://www.tiktok.com/",
+        href: "https://www.tiktok.com/@wlkingartpressed",
         name: "TikTok",
         icon: <FaTiktok size={24} />,
     },
     {
-        href: "https://www.facebook.com/",
-        name: "Facebook",
-        icon: <FaFacebook size={24} />,
-    },
-    {
-        href: "https://twitter.com/",
-        name: "Twitter",
-        icon: <FaTwitter size={24} />,
+        href: `https://wa.me/${whatsAppNumber}?text=${encodeURIComponent(whatsAppMessage)}`,
+        name: "WhatsApp",
+        icon: <FaWhatsapp size={24} />,
     },
 ];
 

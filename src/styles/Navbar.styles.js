@@ -16,11 +16,11 @@ export const StyledNavbar = styled.nav`
     left: 0;
     right: 0;
     z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     @media ${devices.tablet} {
         flex-direction: column;
     }
     @media ${devices.laptop} {
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         margin: 0;
         border-radius: 0px;
         padding: 20px 0;
