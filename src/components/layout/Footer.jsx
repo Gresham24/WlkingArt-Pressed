@@ -1,4 +1,7 @@
 import { FaFacebook, FaInstagram, FaTiktok, FaTwitter } from "react-icons/fa";
+ 
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 import {
     StyledFooter,
@@ -43,6 +46,16 @@ const socialLinks = [
 ];
 
 function Footer() {
+    const location = useLocation();
+
+    // Scroll to top whenever the route changes
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth", 
+        });
+    }, [location]);
+
     return (
         <StyledFooter>
             <StyledFooterLinkWrapper>
