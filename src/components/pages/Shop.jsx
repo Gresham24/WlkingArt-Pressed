@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import { FaWhatsapp } from "react-icons/fa";
@@ -19,6 +20,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 function Shop() {
+    const [activeProduct, setActiveProduct] = useState(null);
     const products = [
         {
             imageUrl: `${cheetahGirl}`,
@@ -59,17 +61,32 @@ function Shop() {
         },
     ];
 
+    // Set initial active product
+    useState(() => {
+        setActiveProduct(products[0]);
+    }, []);
+
     const handleWhatsAppClick = () => {
-        const phoneNumber = "+27717091239"; 
-        
-        // Create a custom message (optional)
-        const message = "Hi! I'm interested in ordering press-on nails from WlkingArt Pressed.";
-        
+        const phoneNumber = "+27717091239";
+
+        // Create a custom message with active product details
+        const message = activeProduct
+            ? `Hi! I'm interested in ordering the ${activeProduct.name} press-on nails (${activeProduct.desc} shape) for ${activeProduct.price} from WlkingArt Pressed.`
+            : "Hi! I'm interested in ordering press-on nails from WlkingArt Pressed.";
+
         // Create the WhatsApp URL
-        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-        
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+            message
+        )}`;
+
         // Open WhatsApp in a new tab
-        window.open(whatsappUrl, '_blank');
+        window.open(whatsappUrl, "_blank");
+    };
+
+    const handleSlideChange = (swiper) => {
+        // Get the active slide index, accounting for loop
+        const realIndex = swiper.realIndex;
+        setActiveProduct(products[realIndex]);
     };
 
     return (
@@ -84,6 +101,7 @@ function Shop() {
                     navigation
                     pagination={{ clickable: true }}
                     centeredSlides={true}
+                    onSlideChange={handleSlideChange}
                     breakpoints={{
                         640: {
                             slidesPerView: 2,
@@ -113,7 +131,7 @@ function Shop() {
             </div>
 
             <StyledShopCTA onClick={handleWhatsAppClick}>
-                Place Order on WhatsApp <FaWhatsapp />{" "}
+                Order {activeProduct?.name} on WhatsApp <FaWhatsapp />
             </StyledShopCTA>
         </StyledShopContainer>
     );

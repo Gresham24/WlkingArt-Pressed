@@ -36,7 +36,12 @@ export const StyledSwiper = styled(Swiper)`
 
     .swiper-button-next,
     .swiper-button-prev {
-        color: ${colors.hotPink};
+        color:  ${colors.hotPink};
+        &::after {
+            font-weight: 900;  /* Make arrows bolder */
+            font-size: 50px;   /* Increase size */
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.36); /* Optional: add some depth */
+        }
     }
 
     .swiper-button-next {

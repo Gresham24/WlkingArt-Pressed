@@ -1,5 +1,4 @@
 import { FaFacebook, FaInstagram, FaTiktok, FaTwitter } from "react-icons/fa";
- 
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
@@ -19,7 +18,7 @@ const footerLinks = [
     { path: "/sizes", label: "Sizes" },
     { path: "/shop", label: "Shop Collection" },
     { path: "/faq", label: "FAQ" },
-    { path: "/privacypolicy", label: "Privacy Policy" }
+    { path: "/privacypolicy", label: "Privacy Policy" },
 ];
 
 const socialLinks = [
@@ -52,19 +51,21 @@ function Footer() {
     useEffect(() => {
         window.scrollTo({
             top: 0,
-            behavior: "smooth", 
+            behavior: "smooth",
         });
     }, [location]);
 
     return (
         <StyledFooter>
             <StyledFooterLinkWrapper>
-            <StyledFooterLinks>
+                <StyledFooterLinks>
                     {footerLinks.map(({ path, label }) => (
-                        <StyledFooterLink 
+                        <StyledFooterLink
                             key={path}
                             to={path}
-                            className={({ isActive }) => isActive ? "active" : ""}
+                            className={({ isActive }) =>
+                                isActive ? "active" : ""
+                            }
                         >
                             {label}
                         </StyledFooterLink>
